@@ -10,9 +10,6 @@ const showMenu = (toggleId, navId) =>{
     }
 }
 
-const resumeDownloader = (e) => {
-    console.log(e)
-}
 
 
 
