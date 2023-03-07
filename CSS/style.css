@@ -178,7 +178,7 @@ img {
 }
 
 .home {
-    margin-top: 50px;
+    margin-top: 10px;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
@@ -234,10 +234,11 @@ img {
 
 .home__img {
     position: absolute;
-    right: 0;
+    right: 25px;
     bottom: 75px;
     width: 350px;
-    z-index: var(--z-normal);
+    z-index: 0;
+
 
 }
 
@@ -250,18 +251,24 @@ img {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding-bottom: 1rem;
+    margin-top: 4rem;
+    z-index: 1;
 
 }
 
 .home__social-icon {
-    margin-bottom: 2rem;
-    font-size: 1.33rem;
+    color: white;
+    padding-right: 2rem;
+    margin-right: 2rem;
+    font-size: 2.5rem;
     cursor: pointer;
+
+
 }
 
 .home__social-icon:hover {
-    color: white;
+    color: #18A5FB;
+
 }
 
 /*----- MEDIA QUERIES -----*/
