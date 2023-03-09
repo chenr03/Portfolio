@@ -61,7 +61,9 @@ body {
 h1, h2 {
     margin: 0;
     color: lightblue;
-    /*text-shadow: 3px 3px 5px rgba(128, 0, 0, 1);*/
+    text-align: center;
+    padding: 50px;
+
 }
 
 ul {
@@ -156,7 +158,7 @@ img {
     height: 0.1875rem;
     left: 0.125rem;
     top: 2.125rem;
-    background-color: lightblue;
+    background-color: mediumpurple;
 }
 
 .nav__logo {
@@ -192,86 +194,32 @@ img {
     background-image: linear-gradient(var(--black-color), lightblue);
 }
 
-.form {
-    margin-top: 16%;
-    margin-left: 12.5%;
-    width: 100%;
-    text-align: center;
-    max-width: 75%;;
-    background-color: mediumpurple;
-    border-radius: 10px;
-    box-shadow: 0 35px 55px rgba(0.5,0.5,0.5,0.5);
-    z-index: 1000;
-    overflow: hidden;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
 
-}
-
-.btn {
-    font-size: 25px;
-    font-weight: 300;
-    color: white;
-    background: black;
-    margin-left: 0;
-    margin-top: 10px;
-
-}
-
-.input {
-    width: 100%;
-    margin-bottom: 5px;
-    padding-bottom: 10px;
-}
-
-.contact-info {
-    max-height: 300px;
-
-
-}
-
-.form .contact-info {
-    padding-left: 15px;
-}
-
-.title  {
-    margin-bottom: 50px;
-}
-
-.form h3 {
-    text-align: center;
-    /*margin-bottom: 50px;*/
-}
-
-.title2 h3 {
-    margin-bottom: 100px;
-}
-
-.contact-form {
-    background-color: lightsalmon;
-    position: relative;
-
-}
-
-
-
-.contact-form:before {
-    content: "";
-    position: absolute;
+/* Start of this page's css specifically */
+.gallery {
     margin-top: 150px;
-    width: 26px;
-    height: 26px;
-    background-color: black;
-    transform: rotate(45deg);
-    top: 50px;
-    left: -13px;
 }
 
-form {
-    padding: 2.3rem 2.2rem;
-    z-index: 10;
-    overflow: hidden;
-    position: relative;
+
+
+.gallery img {
+    width: 200px;
+    height: 175px;
+    border: solid 5px lightsalmon;
+    padding: 0;
+    margin-left: 100px;
+    justify-content: space-between;
+
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 1em;
+    justify-content: center;
+    align-items: normal;
+    align-content: center;
+    padding: 20px;
 }
 
 /*----- MEDIA QUERIES -----*/
@@ -279,86 +227,65 @@ form {
     body {
         margin: 0;
     }
+
     .l-main {
         height: 100vh;
     }
+
     .nav {
         height: 4rem;
     }
+
     .nav__list {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
         padding-top: 0;
     }
+
     .nav__item {
         margin-left: 3rem;
         margin-bottom: 0;
     }
+
     .nav__toggle, .nav__close {
         display: none;
     }
+
     .nav__link {
         text-transform: initial;
     }
-    .home {
-        -ms-grid-rows: max-content 20px;
-        grid-template-rows: max-content 20px;
-        -ms-flex-line-pack: center;
-        align-content: center;
-    }
-    .home__information {
-        margin-top: 2rem;
-    }
-    .home__social {
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-        flex-direction: row;
-        padding-top: 8rem;
-        padding-bottom: 0;
-    }
-    .home__social-icon {
-        margin-right: 2rem;
-        margin-bottom: 0;
-    }
-    .home__img {
-        width: 553px;
-        right: 5%;
-    }
-}
 
 
+    @media screen and (min-width: 1200px) {
+        .bd-grid {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-@media screen and (min-width: 1200px) {
-    .bd-grid {
-        margin-left: auto;
-        margin-right: auto;
+    }
+    /*ANIMATE*/
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: var(--z-modal);
     }
 
 
-}
+    .first {
+        background-color: var(--offwhite-color);
+    }
 
-/*ANIMATE*/
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: var(--z-modal);
-}
+    .second {
+        background-color: var(--offwhite-color);
+        left: 33.3%;
+    }
 
-.first {
-    background-color: var(--offwhite-color);
-}
-
-.second {
-    background-color: var(--offwhite-color);
-    left: 33.3%;
-}
-
-.third {
-    background-color: var(--offwhite-color);
-    left: 66.6%;
+    .third {
+        background-color: var(--offwhite-color);
+        left: 66.6%;
+    }
 }
